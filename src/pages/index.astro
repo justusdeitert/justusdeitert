@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const links = [
+  { href: 'mailto:mail@justusdeitert.de', label: 'Email', icon: 'i-lucide-mail' },
+  { href: 'https://github.com/justusdeitert', label: 'GitHub', icon: 'i-simple-icons-github' },
+  { href: 'https://www.linkedin.com/in/justusdeitert', label: 'LinkedIn', icon: 'i-simple-icons-linkedin' },
+];
+
+const stack = {
+  Frontend: ['Vue.js', 'React', 'Next.js', 'TypeScript', 'UnoCSS', 'SCSS'],
+  Backend: ['PHP', 'Node.js', 'Express', 'Symfony'],
+  Tools: ['Docker', 'Git', 'CI/CD', 'Linux'],
+};
+---
+
+<Layout>
+  <main class="mx-auto max-w-2xl px-6 py-10 md:py-14">
+    <section class="mb-16">
+      <p class="text-sm text-brand-fg font-mono mb-4">// Berlin, Germany</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+        Hey, I'm Justus.
+      </h1>
+      <p class="text-lg leading-relaxed text-neutral-300">
+        Software Developer with 10+ years of experience. I build performant,
+        scalable web applications with a focus on great user experience.
+        Currently a Software Engineer at
+        <a
+          href="https://www.notebooksbilliger.de"
+          class="text-brand-fg hover:underline underline-offset-4"
+          target="_blank"
+          rel="noopener noreferrer">notebooksbilliger.de</a
+        >, developing CMS and e-commerce platforms.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-neutral-500 mb-6">
+        Stack
+      </h2>
+      <dl class="space-y-4">
+        {
+          Object.entries(stack).map(([category, items]) => (
+            <div class="flex flex-col md:flex-row md:gap-6">
+              <dt class="md:w-24 text-sm text-neutral-500 mb-1 md:mb-0">
+                {category}
+              </dt>
+              <dd class="flex flex-wrap gap-2">
+                {items.map((item) => (
+                  <span class="text-sm px-2 py-0.5 rounded-md bg-neutral-900 border border-neutral-800 text-neutral-300">
+                    {item}
+                  </span>
+                ))}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-neutral-500 mb-6">
+        Currently
+      </h2>
+      <ul class="space-y-3 text-neutral-300">
+        <li class="flex gap-3">
+          <span class="i-lucide-sprout text-brand-fg mt-1 shrink-0"></span>
+          <span>Keen on contributing more to open source.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="i-lucide-rocket text-brand-fg mt-1 shrink-0"></span>
+          <span>Building and sharing side projects.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-xs uppercase tracking-widest text-neutral-500 mb-6">
+        Get in touch
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              target={link.href.startsWith('http') ? '_blank' : undefined}
+              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              class="group inline-flex items-center gap-2 px-3 py-2 rounded-md border border-neutral-800 bg-neutral-900 hover:border-brand transition-colors"
+            >
+              <span class={`${link.icon} text-neutral-400 group-hover:text-brand-fg transition-colors`} />
+              <span class="text-sm text-neutral-300">{link.label}</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <footer class="mt-24 pt-8 border-t border-neutral-900 text-xs text-neutral-600">
+      © {new Date().getFullYear()} Justus Deitert
+    </footer>
+  </main>
+</Layout>
