@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 · Page not found · Justus Deitert" description="This page does not exist.">
+  <main class="mx-auto max-w-2xl px-6 py-10 md:py-14 min-h-screen flex flex-col justify-center">
+    <p class="text-sm text-brand-fg font-mono mb-4">// 404</p>
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+      Page not found.
+    </h1>
+    <p class="text-lg leading-relaxed text-neutral-300 mb-10">
+      The page you're looking for doesn't exist or has been moved.
+    </p>
+    <a
+      href="/"
+      class="group inline-flex w-fit items-center gap-2 px-3 py-2 rounded-md border border-neutral-800 bg-neutral-900 hover:border-brand transition-colors"
+    >
+      <span class="i-lucide-arrow-left text-neutral-400 group-hover:text-brand-fg transition-colors" />
+      <span class="text-sm text-neutral-300">Back to home</span>
+    </a>
+  </main>
+</Layout>
