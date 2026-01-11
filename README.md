@@ -2,9 +2,7 @@
 
 **Software Developer based in Berlin — 10+ years of experience**
 
-I build performant, scalable web applications with a focus on great user experience. Background in both freelance and full-time roles.
-
-Currently working as a Software Engineer at [notebooksbilliger.de](https://www.notebooksbilliger.de), developing and optimizing CMS solutions and e-commerce platforms.
+I build performant, scalable web applications with a focus on great user experience. Background in both freelance and full-time roles — currently working as a Software Engineer at [notebooksbilliger.de](https://www.notebooksbilliger.de), developing and optimizing CMS solutions and e-commerce platforms.
 
 ## What I work with
 
